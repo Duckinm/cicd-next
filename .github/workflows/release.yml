@@ -1,12 +1,8 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Release
 
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    branches: [main, beta]
 
 jobs:
   release:
