@@ -20,7 +20,7 @@ jobs:
           node-version: 14.x
 
       - name: Install semantic-release extra plugins
-        run: yard add -D @semantic-release/changelog @semantic-release/git
+        run: yarn add -D @semantic-release/changelog @semantic-release/git
 
       - name: Install node modules
         run: |
