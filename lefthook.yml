@@ -1,0 +1,41 @@
+pre-commit:
+  parallel: true
+  commands:
+    lint:
+      glob: '*.{ts,tsx}'
+      run: yarn lint {staged_files}
+    style-lint:
+      glob: '*.{tsx}'
+      run: yarn lint:css {staged_files}
+    spelling:
+      glob: '*.{ts,tsx,md}'
+      run: yarn cspell {staged_files}
+
+pre-merge:
+  parallel: true
+  skip_output: true
+  commands:
+    lint:
+      glob: '*.{ts,tsx}'
+      run: yarn lint
+    style-lint:
+      glob: '*.{tsx}'
+      run: yarn lint:css
+    spelling:
+      glob: '*.{ts,tsx,md}'
+      run: yarn cspell **/*.{ts,tsx,md}
+
+commit-msg:
+  parallel: true
+  commands:
+    lint-commit-msg:
+      run: npx commitlint --edit
+    spell-check:
+      run: yarn cspell --no-summary {1}
+# pre-push:
+#   parallel: true
+#   commands:
+#     test:
+#       run: yarn test
+#     packages-audit:
+#       run: yarn audit
