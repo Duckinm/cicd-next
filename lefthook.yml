@@ -3,7 +3,7 @@ pre-commit:
   commands:
     lint:
       glob: '*.{ts,tsx}'
-      run: yarn lint {staged_files}
+      run: yarn lint:eslint:fix {staged_files}
     style-lint:
       glob: '*.{tsx}'
       run: yarn lint:css {staged_files}
@@ -17,7 +17,7 @@ pre-merge:
   commands:
     lint:
       glob: '*.{ts,tsx}'
-      run: yarn lint
+      run: yarn lint:eslint:fix
     style-lint:
       glob: '*.{tsx}'
       run: yarn lint:css

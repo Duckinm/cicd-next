@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint --no-cache",
+    "lint:eslint:fix": "eslint --ext .ts,.tsx,.js,.jsx --no-error-on-unmatched-pattern --ignore-path .gitignore --ignore-pattern lib/ --fix",
     "lint:css": "stylelint **/*.{css,tsx} --ignore-path .gitignore --ignore-pattern pages/api --ignore-pattern assets --ignore-pattern platform"
   },
   "dependencies": {
