@@ -17,7 +17,7 @@ pre-commit:
       run: yarn lint:css {staged_files}
     prettier:
       glob: '*.{md,html,json,yml}'
-      run: yarn prettier {staged_files} --write
+      run: yarn pretty-quick {staged_files} --write
     spelling:
       glob: '*.{ts,tsx,md}'
       run: yarn cspell {staged_files}
@@ -34,7 +34,7 @@ pre-merge:
       run: yarn lint:css
     prettier:
       glob: '*.{md,html,json,yml}'
-      run: yarn prettier
+      run: yarn pretty-quick
     spelling:
       glob: '*.{ts,tsx,md}'
       run: yarn cspell **/*.{ts,tsx,md}
