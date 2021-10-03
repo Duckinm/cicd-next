@@ -1,3 +1,11 @@
+# pre-push:
+#   parallel: true
+#   commands:
+#     test:
+#       run: yarn test
+#     packages-audit:
+#       run: yarn audit
+
 pre-commit:
   parallel: true
   commands:
@@ -32,10 +40,3 @@ commit-msg:
       run: npx commitlint --edit
     spell-check:
       run: yarn cspell --no-summary {1}
-# pre-push:
-#   parallel: true
-#   commands:
-#     test:
-#       run: yarn test
-#     packages-audit:
-#       run: yarn audit

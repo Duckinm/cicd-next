@@ -25,6 +25,7 @@ jobs:
       - name: Run Pre-merge with Lefthook
         run: |
           yarn lefthook run pre-merge
-      - name: Run test
-        run: |
-          yarn test
+
+      # - name: Run test
+      #   run: |
+      #     yarn test
