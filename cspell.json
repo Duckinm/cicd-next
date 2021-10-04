@@ -1,5 +1,0 @@
-{
-  "language": "en",
-  "words": ["TTFB", "Zain", "lefthook", "cspell"],
-  "ignorePaths": ["node_modules/**"]
-}
