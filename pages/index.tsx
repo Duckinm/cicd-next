@@ -1,8 +1,9 @@
+import Layout from 'components/Layouts/mainLayout'
 import { ReactElement } from 'react'
 
 const Home = () => {
-  return <div>Hello World</div>
+  return <h1 className="badge badge-success text-lg">Hello World</h1>
 }
 
-Home.getLayout = (page: ReactElement) => <div>{page}</div>
+Home.getLayout = (page: ReactElement) => <Layout>{page}</Layout>
 export default Home
