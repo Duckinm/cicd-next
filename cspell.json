@@ -1,0 +1,15 @@
+{
+  "language": "en",
+  "words": [
+    "TTFB",
+    "Zain",
+    "lefthook",
+    "cspell",
+    "tailwind",
+    "tailwindcss",
+    "daisyui",
+    "gitignore",
+    ".gitignore"
+  ],
+  "ignorePaths": ["node_modules/**"]
+}
